@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Naruto Uzumaki Figure",
+    "price": 2500,
+    "description": "A high-quality figure of Naruto Uzumaki from the anime Naruto.",
+    "image": "src/img/naruto1.jpg",
+    "category": "figures",
+    "stock": 15,
+    "tags": ["anime", "naruto", "figure"],
+    "stars": 5
+  },
+  {
+    "id": 2,
+    "title": "Attack on Titan Poster",
+    "price": 700,
+    "description": "A stunning poster featuring characters from Attack on Titan.",
+    "image": "src/img/AttackonTitanPoster.jpg",
+    "category": "posters",
+    "stock": 30,
+    "tags": ["anime", "aot", "poster"],
+    "stars": 4
+  },
+  {
+    "id": 3,
+    "title": "One Piece Luffy Keychain",
+    "price": 350,
+    "description": "A cute keychain of Monkey D. Luffy from One Piece.",
+    "image": "src/img/onepice1.jpg",
+    "category": "keychains",
+    "stock": 50,
+    "tags": ["anime", "one piece", "keychain"],
+    "stars": 5
+  },
+  {
+    "id": 4,
+    "title": "Demon Slayer Tanjiro Figure",
+    "price": 3200,
+    "description": "Detailed figure of Tanjiro Kamado from Demon Slayer.",
+    "image": "src/img/demonSlayer1.jpg",
+    "category": "figures",
+    "stock": 0,
+    "tags": ["anime", "demon slayer", "figure"],
+    "stars": 4
+  },
+  {
+    "id": 5,
+    "title": "My Hero Academia Notebook",
+    "price": 500,
+    "description": "A themed notebook featuring My Hero Academia characters.",
+    "image": "src/img/Myhero1.jpg",
+    "category": "stationery",
+    "stock": 40,
+    "tags": ["anime", "my hero academia", "notebook"],
+    "stars": 3
+  },
+  {
+    "id": 6,
+    "title": "Sailor Moon Mug",
+    "price": 800,
+    "description": "A ceramic mug with Sailor Moon artwork.",
+    "image": "src/img/volleyball.jpg",
+    "category": "mugs",
+    "stock": 25,
+    "tags": ["anime", "sailor moon", "mug"],
+    "stars": 4
+  },
+  {
+    "id": 7,
+    "title": "Dragon Ball Z T-shirt",
+    "price": 1200,
+    "description": "A comfortable t-shirt with Dragon Ball Z print.",
+    "image": "https://example.com/dbz-tshirt.jpg",
+    "category": "apparel",
+    "stock": 35,
+    "tags": ["anime", "dragon ball z", "tshirt"],
+    "stars": 5
+  },
+  {
+    "id": 8,
+    "title": "Tokyo Ghoul Kaneki Mask",
+    "price": 1500,
+    "description": "A replica mask of Kaneki from Tokyo Ghoul.",
+    "image": "https://example.com/kaneki-mask.jpg",
+    "category": "accessories",
+    "stock": 12,
+    "tags": ["anime", "tokyo ghoul", "mask"],
+    "stars": 4
+  },
+  {
+    "id": 9,
+    "title": "Death Note Replica",
+    "price": 900,
+    "description": "A realistic replica of the Death Note notebook.",
+    "image": "https://example.com/deathnote.jpg",
+    "category": "stationery",
+    "stock": 20,
+    "tags": ["anime", "death note", "notebook"],
+    "stars": 5
+  },
+  {
+    "id": 10,
+    "title": "Haikyuu Volleyball",
+    "price": 2000,
+    "description": "Official size volleyball inspired by Haikyuu!!",
+    "image": "https://example.com/haikyuu-volleyball.jpg",
+    "category": "sports",
+    "stock": 8,
+    "tags": ["anime", "haikyuu", "volleyball"],
+    "stars": 4
+  }
+] 
