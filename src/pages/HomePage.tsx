@@ -10,6 +10,7 @@ interface Product {
   image: string;
   category: string;
   stock: number;
+  stars: number;
 }
 
 interface BlogPost {
@@ -33,6 +34,9 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isBlogLoading, setIsBlogLoading] = useState(true);
 
+  // Dynamically import all blog images from src/img/Blog
+  const blogImages = import.meta.glob('../img/Blog/*', { eager: true, as: 'url' });
+
   useEffect(() => {
     setFeaturedProducts(productsData.slice(0, 6));
     setIsLoading(false);
@@ -40,63 +44,45 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
   useEffect(() => {
     const fetchBlogPosts = async () => {
-      // Mock blog posts data
-      const mockBlogPosts: BlogPost[] = [
-        {
-          id: 1,
-          title: "Top 10 Must-Have Anime Figures of 2024",
-          excerpt: "Discover the most sought-after anime figures that collectors are raving about this year.",
-          author: "Sakura Tanaka",
-          publishedAt: "2024-01-15",
-          readTime: 8,
-          image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=600",
-          category: "Reviews"
-        },
-        {
-          id: 2,
-          title: "The Art of Anime Poster Collection",
-          excerpt: "Learn how to start your anime poster collection with our comprehensive beginner's guide.",
-          author: "Hiroshi Yamamoto",
-          publishedAt: "2024-01-12",
-          readTime: 6,
-          image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=600",
-          category: "Guides"
-        },
-        {
-          id: 3,
-          title: "Upcoming Anime Releases to Watch",
-          excerpt: "Get ready for an exciting year of anime with our preview of the most anticipated series.",
-          author: "Yuki Sato",
-          publishedAt: "2024-01-10",
-          readTime: 10,
-          image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=600",
-          category: "News"
-        }
-      ];
-      
-      setTimeout(() => {
-        setBlogPosts(mockBlogPosts);
+      try {
+        const response = await fetch('/src/blogs.json');
+        const data: BlogPost[] = await response.json();
+        // Map image paths to imported URLs if they are local
+        const resolvedPosts = data.map(post => {
+          let imageUrl = post.image;
+          if (imageUrl.startsWith('src/img/Blog/')) {
+            // Remove 'src/' and prepend '../' to match import.meta.glob keys
+            const key = '../' + imageUrl.slice(4);
+            if (blogImages[key]) {
+              imageUrl = blogImages[key];
+            }
+          }
+          return { ...post, image: imageUrl };
+        });
+        setBlogPosts(resolvedPosts);
         setIsBlogLoading(false);
-      }, 800);
+      } catch (error) {
+        console.error('Failed to fetch blog posts:', error);
+        setIsBlogLoading(false);
+      }
     };
-
     fetchBlogPosts();
   }, []);
 
   const categories = [
     {
       name: 'Figures',
-      image: 'https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'src/img/home1.jpg',
       category: 'figures'
     },
     {
       name: 'Posters',
-      image: 'https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'src/img/home2.jpg',
       category: 'posters'
     },
     {
       name: 'Keychains',
-      image: 'https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'src/img/home3.jpg',
       category: 'keychains'
     }
   ];
@@ -174,7 +160,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} onNavigate={onNavigate} />
+                <ProductCard key={product.id} product={product} />
               ))}
             </div>
           )}

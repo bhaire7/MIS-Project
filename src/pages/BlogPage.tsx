@@ -24,89 +24,19 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [showFilters, setShowFilters] = useState(false);
 
-  // Mock blog posts data
-  const mockPosts: BlogPost[] = [
-    {
-      id: 1,
-      title: "Top 10 Must-Have Anime Figures of 2024",
-      excerpt: "Discover the most sought-after anime figures that collectors are raving about this year, from limited editions to stunning craftsmanship.",
-      content: "Full blog content here...",
-      author: "Sakura Tanaka",
-      publishedAt: "2024-01-15",
-      readTime: 8,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["figures", "collecting", "2024", "recommendations"],
-      category: "Reviews"
-    },
-    {
-      id: 2,
-      title: "The Art of Anime Poster Collection: A Beginner's Guide",
-      excerpt: "Learn how to start your anime poster collection, from choosing the right pieces to proper display and preservation techniques.",
-      content: "Full blog content here...",
-      author: "Hiroshi Yamamoto",
-      publishedAt: "2024-01-12",
-      readTime: 6,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["posters", "collecting", "beginner", "display"],
-      category: "Guides"
-    },
-    {
-      id: 3,
-      title: "Upcoming Anime Releases to Watch in 2024",
-      excerpt: "Get ready for an exciting year of anime with our comprehensive preview of the most anticipated series and movies coming soon.",
-      content: "Full blog content here...",
-      author: "Yuki Sato",
-      publishedAt: "2024-01-10",
-      readTime: 10,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["anime", "2024", "releases", "preview"],
-      category: "News"
-    },
-    {
-      id: 4,
-      title: "How to Care for Your Anime Collectibles",
-      excerpt: "Essential tips and tricks to keep your anime figures, posters, and other collectibles in pristine condition for years to come.",
-      content: "Full blog content here...",
-      author: "Mei Chen",
-      publishedAt: "2024-01-08",
-      readTime: 7,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["care", "maintenance", "collectibles", "tips"],
-      category: "Guides"
-    },
-    {
-      id: 5,
-      title: "The Evolution of Anime Merchandise: Past to Present",
-      excerpt: "Take a journey through the history of anime merchandise and see how it has evolved from simple toys to sophisticated collectibles.",
-      content: "Full blog content here...",
-      author: "Takeshi Nakamura",
-      publishedAt: "2024-01-05",
-      readTime: 12,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["history", "merchandise", "evolution", "culture"],
-      category: "Culture"
-    },
-    {
-      id: 6,
-      title: "Best Anime Keychains for Every Budget",
-      excerpt: "From affordable options to premium collectibles, find the perfect anime keychain that fits your style and budget.",
-      content: "Full blog content here...",
-      author: "Rina Kobayashi",
-      publishedAt: "2024-01-03",
-      readTime: 5,
-      image: "https://images.pexels.com/photos/6373305/pexels-photo-6373305.jpeg?auto=compress&cs=tinysrgb&w=800",
-      tags: ["keychains", "budget", "accessories", "recommendations"],
-      category: "Reviews"
-    }
-  ];
-
   useEffect(() => {
-    // Simulate API call
-    setTimeout(() => {
-      setPosts(mockPosts);
-      setFilteredPosts(mockPosts);
-      setIsLoading(false);
-    }, 1000);
+    // Fetch blog posts from blogs.json
+    fetch('/src/blogs.json')
+      .then((response) => response.json())
+      .then((data: BlogPost[]) => {
+        setPosts(data);
+        setFilteredPosts(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error('Failed to fetch blog posts:', error);
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {

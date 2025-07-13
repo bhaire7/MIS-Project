@@ -130,7 +130,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
           {/* Hero Image */}
           <div className="relative mb-8 rounded-lg overflow-hidden shadow-lg">
             <img
-              src={post.image}
+              src="/src/img/Blog/blog1.jpg"
               alt={post.title}
               className="w-full h-64 md:h-96 object-cover"
             />
