@@ -5,24 +5,25 @@ const AboutPage: React.FC = () => (
     <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl p-10 max-w-2xl w-full border-t-8 border-purple-400 dark:border-purple-700">
       <div className="flex flex-col items-center mb-6">
         <img
-          src="https://randomuser.me/api/portraits/men/32.jpg"
+          src="src/img/me.jpg"
           alt="Student"
-          className="w-28 h-28 rounded-full border-4 border-purple-400 shadow-lg mb-4"
+          className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-purple-400 shadow-lg mb-4 object-cover"
+
         />
         <h1 className="text-4xl font-extrabold text-purple-700 dark:text-purple-300 mb-2">About Us</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-lg">
-          Welcome to our AnimeStore! This project is a demonstration of Management Information System (MIS) concepts, built as a part of the BCA 5th Semester curriculum at Kathmandu Model College.
+          Welcome to my AnimeStore! This project is a demonstration of Management Information System (MIS) concepts, built as a part of the BCA 5th Semester curriculum at Kathmandu Model College.
         </p>
       </div>
       <div className="bg-purple-50 dark:bg-black rounded-xl p-6 mb-6 shadow-inner">
         <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">Student Information</h2>
         <ul className="text-gray-700 dark:text-gray-200 text-base space-y-1">
-          <li><strong>Name:</strong> [Your Name Here]</li>
+          <li><strong>Name:</strong> Baibhav Nepal</li>
           <li><strong>Program:</strong> Bachelor of Computer Applications (BCA), 5th Semester</li>
           <li><strong>College:</strong> Kathmandu Model College</li>
-          <li><strong>Location:</strong> Bagbazar, Kathmandu, Nepal</li>
-          <li><strong>Email:</strong> your.email@example.com</li>
-          <li><strong>Contact:</strong> +977-98XXXXXXXX</li>
+          <li><strong>Location:</strong> Kapan, Kathmandu, Nepal</li>
+          <li><strong>Email:</strong> Baibhavnepal07@gmail.com</li>
+          <li><strong>Contact:</strong> +977-9847374609</li>
         </ul>
       </div>
       <div className="mb-6">
