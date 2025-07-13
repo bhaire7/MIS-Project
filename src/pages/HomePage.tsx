@@ -110,7 +110,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -129,7 +129,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </button>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 dark:from-gray-900 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 dark:from-black to-transparent"></div>
       </section>
 
       {/* Categories Section */}
@@ -160,7 +160,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">
             Featured Products
@@ -182,7 +182,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </section>
 
       {/* Blog Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-black">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-12">
             <div>
@@ -213,7 +213,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               {blogPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                  className="bg-gray-50 dark:bg-neutral-900 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer group"
                   onClick={() => onNavigate(`blog/${post.id}`)}
                 >
                   <div className="relative overflow-hidden">
@@ -258,21 +258,21 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center bg-white dark:bg-neutral-900 rounded-2xl shadow-lg p-8">
               <div className="bg-purple-100 dark:bg-purple-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Truck className="text-purple-600 dark:text-purple-400" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Free Shipping</h3>
               <p className="text-gray-600 dark:text-gray-400">Free shipping on all orders over NRS 6700</p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white dark:bg-neutral-900 rounded-2xl shadow-lg p-8">
               <div className="bg-purple-100 dark:bg-purple-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Shield className="text-purple-600 dark:text-purple-400" size={24} />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Secure Payment</h3>
               <p className="text-gray-600 dark:text-gray-400">Your payment information is safe with us</p>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white dark:bg-neutral-900 rounded-2xl shadow-lg p-8">
               <div className="bg-purple-100 dark:bg-purple-900 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <RotateCcw className="text-purple-600 dark:text-purple-400" size={24} />
               </div>

@@ -92,7 +92,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-600"></div>
       </div>
     );
@@ -100,7 +100,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Post not found</h2>
           <button
@@ -115,7 +115,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         {/* Back Button */}
         <button
@@ -182,13 +182,13 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                   isLiked
                     ? 'bg-red-100 dark:bg-red-900 text-red-600 dark:text-red-400'
-                    : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                    : 'bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                 }`}
               >
                 <Heart size={18} className={isLiked ? 'fill-current' : ''} />
                 <span>{isLiked ? 'Liked' : 'Like'}</span>
               </button>
-              <button className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+              <button className="flex items-center space-x-2 px-4 py-2 bg-gray-100 dark:bg-black text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
                 <Share2 size={18} />
                 <span>Share</span>
               </button>
@@ -205,7 +205,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ postId, onNavigate }) => {
           />
 
           {/* Related Posts CTA */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 text-center">
+          <div className="bg-white dark:bg-black rounded-lg shadow-md p-6 text-center">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
               Enjoyed this article?
             </h3>

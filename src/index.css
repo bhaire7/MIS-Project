@@ -41,3 +41,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Make background fully black in dark mode */
+html.dark {
+  background-color: #000 !important;
+}

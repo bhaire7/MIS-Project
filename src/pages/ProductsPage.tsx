@@ -99,7 +99,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
   const categories = ['figures', 'posters', 'keychains'];
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
@@ -142,7 +142,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
 
         {/* Filters */}
         {showFilters && (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-8">
+          <div className="bg-white dark:bg-black rounded-lg shadow-md p-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -151,7 +151,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
                 <select
                   value={filters.category}
                   onChange={(e) => handleFilterChange('category', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
                 >
                   <option value="">All Categories</option>
                   {categories.map(category => (
@@ -171,7 +171,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
                   value={filters.minPrice}
                   onChange={(e) => handleFilterChange('minPrice', e.target.value)}
                   placeholder="NRS 0"
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -184,7 +184,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
                   value={filters.maxPrice}
                   onChange={(e) => handleFilterChange('maxPrice', e.target.value)}
                   placeholder="NRS 999"
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
                 />
               </div>
 
@@ -195,7 +195,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
                 <select
                   value={filters.sortBy}
                   onChange={(e) => handleFilterChange('sortBy', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
                 >
                   <option value="title">Name</option>
                   <option value="price-low">Price: Low to High</option>
@@ -219,7 +219,7 @@ const ProductsPage: React.FC<ProductsPageProps> = ({ onNavigate, searchParams })
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[...Array(12)].map((_, i) => (
-              <div key={i} className="bg-gray-200 dark:bg-gray-700 rounded-lg h-80 animate-pulse"></div>
+              <div key={i} className="bg-gray-200 dark:bg-black rounded-lg h-80 animate-pulse"></div>
             ))}
           </div>
         ) : filteredProducts.length > 0 ? (

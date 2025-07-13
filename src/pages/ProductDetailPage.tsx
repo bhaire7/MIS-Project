@@ -116,13 +116,7 @@ const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ productId, onNavi
           <div className="space-y-4">
             <div className="aspect-square bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg flex items-center justify-center">
               <img
-                src={
-                  product.image.startsWith('http')
-                    ? product.image
-                    : product.image.startsWith('src/')
-                      ? `/images/${product.image.split('/').pop()}`
-                      : product.image
-                }
+                src={`/${product.image}`}
                 alt={product.title}
                 className="w-full h-full object-contain"
               />

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const AboutPage: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center py-12 px-4">
-    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-10 max-w-2xl w-full border-t-8 border-purple-400 dark:border-purple-700">
+  <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-100 to-white dark:from-black dark:via-black dark:to-black flex items-center justify-center py-12 px-4">
+    <div className="bg-white dark:bg-neutral-900 rounded-2xl shadow-2xl p-10 max-w-2xl w-full border-t-8 border-purple-400 dark:border-purple-700">
       <div className="flex flex-col items-center mb-6">
         <img
           src="https://randomuser.me/api/portraits/men/32.jpg"
@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => (
           Welcome to our AnimeStore! This project is a demonstration of Management Information System (MIS) concepts, built as a part of the BCA 5th Semester curriculum at Kathmandu Model College.
         </p>
       </div>
-      <div className="bg-purple-50 dark:bg-gray-900 rounded-xl p-6 mb-6 shadow-inner">
+      <div className="bg-purple-50 dark:bg-black rounded-xl p-6 mb-6 shadow-inner">
         <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">Student Information</h2>
         <ul className="text-gray-700 dark:text-gray-200 text-base space-y-1">
           <li><strong>Name:</strong> [Your Name Here]</li>

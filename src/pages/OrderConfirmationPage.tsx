@@ -45,11 +45,11 @@ const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({ orderId, 
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           {/* Success Message */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 text-center mb-8">
+          <div className="bg-white dark:bg-black rounded-lg shadow-lg p-8 text-center mb-8">
             <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
               <CheckCircle className="text-green-600 dark:text-green-400" size={32} />
             </div>
@@ -59,7 +59,7 @@ const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({ orderId, 
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Thank you for your purchase. Your order has been successfully placed and is being processed.
             </p>
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+            <div className="bg-gray-50 dark:bg-black rounded-lg p-4">
               <p className="text-sm text-gray-600 dark:text-gray-400">Order Number</p>
               <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
                 #{orderId.toString().padStart(6, '0')}
@@ -68,7 +68,7 @@ const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({ orderId, 
           </div>
 
           {/* Order Timeline */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
+          <div className="bg-white dark:bg-black rounded-lg shadow-lg p-6 mb-8">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
               Order Status
             </h2>
@@ -124,7 +124,7 @@ const OrderConfirmationPage: React.FC<OrderConfirmationPageProps> = ({ orderId, 
           </div>
 
           {/* Next Steps */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+          <div className="bg-white dark:bg-black rounded-lg shadow-lg p-6">
             <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               What's Next?
             </h2>

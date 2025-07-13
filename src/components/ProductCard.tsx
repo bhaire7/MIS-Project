@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <div 
-      className={`bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden ${product.stock === 0 ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
+      className={`bg-white dark:bg-neutral-900 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden ${product.stock === 0 ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
       onClick={() => { if (product.stock > 0) navigate(`/products/${product.id}`); }}
       tabIndex={product.stock === 0 ? -1 : 0}
       aria-disabled={product.stock === 0}
@@ -49,7 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           {product.category}
         </div>
         {product.stock === 0 && (
-          <div className="absolute top-2 left-2 bg-gray-700 text-white px-2 py-1 rounded text-xs opacity-90">
+          <div className="absolute top-2 left-2 bg-black text-white px-2 py-1 rounded text-xs opacity-90">
             Out of Stock
           </div>
         )}

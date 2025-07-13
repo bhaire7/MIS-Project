@@ -29,7 +29,7 @@ const CartPage: React.FC = () => {
   const outOfStockItems = cart.filter(item => item.product.stock === 0);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Shopping Cart</h1>
         
@@ -37,7 +37,7 @@ const CartPage: React.FC = () => {
           {/* Cart Items */}
           <div className="lg:col-span-2 space-y-4">
             {inStockItems.map((item) => (
-              <div key={item.productId} className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <div key={item.productId} className="bg-white dark:bg-black rounded-lg shadow-md p-6">
                 <div className="flex items-center space-x-4">
                   <img
                     src={item.product.image}

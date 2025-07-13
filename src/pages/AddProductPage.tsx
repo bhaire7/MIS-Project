@@ -52,8 +52,8 @@ const AddProductPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center py-12 px-4">
-      <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-10 max-w-lg w-full space-y-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-black flex items-center justify-center py-12 px-4">
+      <form onSubmit={handleSubmit} className="bg-white dark:bg-black rounded-2xl shadow-2xl p-10 max-w-lg w-full space-y-6">
         <h1 className="text-3xl font-bold text-purple-700 dark:text-purple-300 mb-4">Add New Product</h1>
         <input
           type="text"
@@ -62,7 +62,7 @@ const AddProductPage: React.FC = () => {
           value={product.title}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <textarea
           name="description"
@@ -70,7 +70,7 @@ const AddProductPage: React.FC = () => {
           value={product.description}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <input
           type="number"
@@ -80,7 +80,7 @@ const AddProductPage: React.FC = () => {
           onChange={handleChange}
           required
           min={0}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <input
           type="number"
@@ -90,7 +90,7 @@ const AddProductPage: React.FC = () => {
           onChange={handleChange}
           required
           min={0}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <input
           type="text"
@@ -99,7 +99,7 @@ const AddProductPage: React.FC = () => {
           value={product.category}
           onChange={handleChange}
           required
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <input
           type="text"
@@ -107,7 +107,7 @@ const AddProductPage: React.FC = () => {
           placeholder="Tags (comma separated)"
           value={product.tags}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <input
           type="number"
@@ -117,7 +117,7 @@ const AddProductPage: React.FC = () => {
           onChange={handleChange}
           min={1}
           max={5}
-          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+          className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
         />
         <div>
           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Product Image</label>

@@ -138,7 +138,7 @@ const BlogPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
         <div className="container mx-auto px-4">
@@ -164,7 +164,7 @@ const BlogPage: React.FC = () => {
                 placeholder="Search blog posts..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full px-4 py-2 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 bg-white dark:bg-black text-gray-900 dark:text-white"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
             </div>
@@ -172,7 +172,7 @@ const BlogPage: React.FC = () => {
             {/* Filter Toggle */}
             <button
               onClick={() => setShowFilters(!showFilters)}
-              className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              className="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-100 dark:hover:bg-black transition-colors"
             >
               <Filter size={20} />
               <span>Filters</span>
@@ -181,14 +181,14 @@ const BlogPage: React.FC = () => {
 
           {/* Category Filters */}
           {showFilters && (
-            <div className="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div className="mt-4 p-4 bg-white dark:bg-black rounded-lg shadow-md">
               <div className="flex flex-wrap gap-2">
                 <button
                   onClick={() => setSelectedCategory('')}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     selectedCategory === ''
                       ? 'bg-purple-600 text-white'
-                      : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                      : 'bg-gray-200 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                   }`}
                 >
                   All Categories
@@ -200,7 +200,7 @@ const BlogPage: React.FC = () => {
                     className={`px-3 py-1 rounded-full text-sm transition-colors ${
                       selectedCategory === category
                         ? 'bg-purple-600 text-white'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                        : 'bg-gray-200 dark:bg-black text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >
                     {category}
@@ -215,7 +215,7 @@ const BlogPage: React.FC = () => {
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
+              <div key={i} className="bg-white dark:bg-black rounded-lg shadow-md overflow-hidden">
                 <div className="h-48 bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
                 <div className="p-6">
                   <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded animate-pulse mb-2"></div>
@@ -232,7 +232,7 @@ const BlogPage: React.FC = () => {
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                className="bg-white dark:bg-neutral-900 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer group"
                 onClick={() => navigate(`/blog/${post.id}`)}
               >
                 <div className="relative overflow-hidden">
